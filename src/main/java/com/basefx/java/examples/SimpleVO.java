@@ -1,4 +1,4 @@
-package com.dovgopolyy.java.examples;
+package com.basefx.java.examples;
 
 import lombok.Builder;
 import lombok.Data;
@@ -11,8 +11,8 @@ public class SimpleVO {
 
     private String name;
 
-    private BigDecimal valueA;
+    private BigDecimal valueBigDecimal;
 
-    private Double valueB;
+    private Double valueDouble;
 
 }

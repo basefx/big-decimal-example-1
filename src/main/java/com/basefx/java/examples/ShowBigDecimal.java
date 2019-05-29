@@ -1,4 +1,4 @@
-package com.dovgopolyy.java.examples;
+package com.basefx.java.examples;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,17 +11,18 @@ public class ShowBigDecimal {
         Double d = 99999999999999.99;
         BigDecimal bd = new BigDecimal("99999999999999.99");
 
-        System.out.println(" " + d);
-        System.out.println(" " + bd);
+        System.out.println("Double      : " + d);
+        System.out.println("BigDecimal  : " + bd);
 
         SimpleVO vo = SimpleVO.builder()
                 .name("Show diff")
-                .valueA(bd)
-                .valueB(d)
+                .valueBigDecimal(bd)
+                .valueDouble(d)
                 .build();
 
 
         String prettyJson = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(vo);
+        System.out.println("JSON:");
         System.out.println(prettyJson);
     }
 
